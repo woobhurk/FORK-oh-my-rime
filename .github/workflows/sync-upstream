@@ -1,0 +1,42 @@
+name: Sync upstream
+
+on:
+  schedule:
+    # 每天 02:17 UTC，也就是北京时间 10:17
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Merge upstream into main and mine
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git remote add upstream "https://github.com/Mintimate/oh-my-rime.git"
+          git fetch upstream --prune
+
+          git checkout main
+          git merge --no-edit upstream/main
+          git push origin main
+
+          if git ls-remote --exit-code --heads origin mine >/dev/null; then
+            git checkout -B mine origin/mine
+            git merge --no-edit main
+            git push origin mine
+          else
+            echo "mine 分支还不存在，这一步已跳过。"
+          fi
