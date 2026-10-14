@@ -1,0 +1,216 @@
+# SPDX-FileCopyrightText: 2015 - 2024 Rime community
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# Trime custom style settings
+# encoding: utf-8
+
+patch:
+  # 符号列表（替换开头字符）
+  "liquid_keyboard/symbollist/keys":
+    [ 符号: "Ffh", 电脑: "Fdn", 象棋: "Fxq", 麻将: "Fmj", 骰子: "Fsz", 扑克: "Fpk", 天气: "Ftq", 音乐: "Fyy", 八卦: "Fbg", 易经: "Flssg", 天体: "Ftt", 星座: "Fxz", 星号: "Fxh", 方块: "Ffk", 几何: "Fjh", 箭头: "Fjt", 数学: "Fsx", 上标: "Fsb", 下标: "Fxb", 单位: "Fdw", 货币: "Fhb", 拼音: "Fpy", 注音: "Fzy", 假名: "Fjm", 片假: "Fpjm", 韩文: "Fhw", 希腊: "Fxl", 希大: "Fxld", 罗马: "Flm", 罗大: "Flmd", 俄语: "Fey", 俄大: "Feyd", 表情: "Fbq", 一: "F1", 二: "F2", 三: "F3", 四: "F4", 五: "F5", 六: "F6", 七: "F7", 八: "F8", 九: "F9", 零: "F0", 十: "F10", 分数: "Ffs", 标点: "Fbd", 偏旁: "Fpp", 竖标: "Fbdz" ]
+
+  # 默认键盘
+  "preset_keyboards/default/keys":
+    ## 功能键：
+    #- {click: select_all, long_click: liquid_keyboard_clipboard}
+    #- {click: undo, long_click: Home}
+    #- {click: redo, long_click: End}
+    #- {click: copy, long_click: Insert}
+    #- {click: cut, long_click: Delete}
+    #- {click: paste_clip, long_click: "{Date} {Time}"}
+    #- {click: Left, long_click: Page_Up}
+    #- {click: Down, long_click: Page_Down}
+    #- {click: Up}
+    #- {click: Right, long_click: liquid_keyboard_switch}
+
+    ## 第一行
+    #- {click: "1", long_click: "!", swipe_up: "!", swipe_down: "`", hint: "`"}
+    #- {click: "2", long_click: "@", swipe_up: "@", swipe_down: "~" , hint: "~"}
+    #- {click: "3", long_click: "#", swipe_up: "#"}
+    #- {click: "4", long_click: "$", swipe_up: "$"}
+    #- {click: "5", long_click: "%", swipe_up: "%"}
+    #- {click: "6", long_click: "^", swipe_up: "^"}
+    #- {click: "7", long_click: "&", swipe_up: "&"}
+    #- {click: "8", long_click: "*", swipe_up: "*"}
+    #- {click: "9", long_click: "(", swipe_up: "("}
+    #- {click: "0", long_click: ")", swipe_up: ")"}
+    ## 第二行
+    #- {click: "q", long_click: "_", swipe_up: "_"}
+    #- {click: "w", long_click: "-", swipe_up: "-"}
+    #- {click: "e", long_click: "+", swipe_up: "+"}
+    #- {click: "r", long_click: "=", swipe_up: "="}
+    #- {click: "t", long_click: "{}{Left}", swipe_up: "{}{Left}", swipe_left: "{", swipe_right: "}"}
+    #- {click: "y", long_click: "[]{Left}", swipe_up: "[]{Left}", swipe_left: "[", swipe_right: "]"}
+    #- {click: "u", long_click: "|", swipe_up: "|"}
+    #- {click: "i", long_click: "\\", swipe_up: "\\"}
+    #- {click: "o", long_click: ":", swipe_up: ":"}
+    #- {click: "p", long_click: ";", swipe_up: ";"}
+    ## 第三行
+    #- {width: 5}
+    #- {click: "a", long_click: Tab, swipe_up: Tab}
+    #- {click: "s", long_click: Home, swipe_up: Home, swipe_down: "{Date} {Time}", hint: "时间"}
+    #- {click: "d", long_click: End, swipe_up: End}
+    #- {click: "f", long_click: Page_Up, swipe_up: Page_Up}
+    #- {click: "g", long_click: Page_Down, swipe_up: Page_Down}
+    #- {click: "h", long_click: ":", swipe_up: ":", swipe_down: Left, hint: "←"}
+    #- {click: "j", long_click: ";", swipe_up: ";", swipe_down: Down, hint: "↓"}
+    #- {click: "k", long_click: "\"", swipe_up: "\"", swipe_down: Up, hint: "↑"}
+    #- {click: "l", long_click: "'", swipe_up: "'", swipe_down: Right, hint: "→"}
+    #- {width: 5}
+    ## 第四行
+    #- {click: Shift_L, double_click: Shift_L3, composing: delimiter, width: 15}
+    #- {click: "z", long_click: select_all, swipe_up: select_all}
+    #- {click: "x", long_click: undo, swipe_up: undo, swipe_down: redo, hint: "↷"}
+    #- {click: "c", long_click: cut, swipe_up: cut}
+    #- {click: "v", long_click: copy, swipe_up: copy}
+    #- {click: "b", long_click: paste_clip, swipe_up: paste_clip}
+    #- {click: "n", long_click: Insert, swipe_up: Insert}
+    #- {click: "m", long_click: Delete, swipe_up: Delete}
+    #- {click: BackSpace, swipe_down: "{select_all}{BackSpace}", hint: "Clear", swipe_left: Escape, width: 15}
+    ## 第五行
+    #- {click: Keyboard_number, long_click: Menu, swipe_up: Menu, width: 12.5}
+    #- {click: Keyboard_bqrw, long_click: Theme_settings, swipe_up: Theme_settings, swipe_down: Color_switch, hint: "颜色", width: 12.5}
+    #- {click: ",", label: "，", long_click: "<>{Left}", swipe_up: "<>{Left}", swipe_left: "<", swipe_right: ">"}
+    #- {click: space, long_click: Mode_switch, swipe_up: Mode_switch, swipe_left: Left, swipe_right: Right, width: 30}
+    #- {click: ".", label: "。", long_click: liquid_keyboard_clipboard, swipe_up: liquid_keyboard_clipboard}
+    #- {click: "/", long_click: "?", swipe_up: "?"}
+    #- {click: Return, composing: Return1, long_click: liquid_keyboard_switch, swipe_up: liquid_keyboard_switch, width: 15}
+
+    # 第一行
+    - {click: "1", long_click: "!", swipe_up: "!"}
+    - {click: "2", long_click: "@", swipe_up: "@"}
+    - {click: "3", long_click: "#", swipe_up: "#"}
+    - {click: "4", long_click: "$", swipe_up: "$"}
+    - {click: "5", long_click: "%", swipe_up: "%"}
+    - {click: "6", long_click: "^", swipe_up: "^"}
+    - {click: "7", long_click: "&", swipe_up: "&"}
+    - {click: "8", long_click: "*", swipe_up: "*"}
+    - {click: "9", long_click: "(", swipe_up: "(", swipe_left: "(){Left}", swipe_right: "(){Left}"}
+    - {click: "0", long_click: ")", swipe_up: ")"}
+    # 第二行
+    - {click: "q", long_click: Tab, swipe_up: Tab}
+    - {click: "w", long_click: "~", swipe_up: "~", swipe_down: "`", hint: "`"}
+    - {click: "e"}
+    - {click: "r"}
+    - {click: "t"}
+    - {click: "y", long_click: "_", swipe_up: "_", swipe_down: "-", hint: "-"}
+    - {click: "u", long_click: "+", swipe_up: "+", swipe_down: "=", hint: "="}
+    - {click: "i", long_click: "{", swipe_up: "{", swipe_down: "}", hint: "}", swipe_left: "{}{Left}", swipe_right: "{}{Left}"}
+    - {click: "o", long_click: "[", swipe_up: "[", swipe_down: "]", hint: "]", swipe_left: "[]{Left}", swipe_right: "[]{Left}"}
+    - {click: "p", long_click: "|", swipe_up: "|", swipe_down: "\\", hint: "\\"}
+    # 第三行
+    - {width: 5}
+    - {click: "a", long_click: Tab, swipe_up: Tab, swipe_down: "{Date} {Time}", hint: "时间"}
+    - {click: "s", long_click: Home, swipe_up: Home, swipe_down: Left, hint: "←"}
+    - {click: "d", long_click: End, swipe_up: End, swipe_down: Down, hint: "↓"}
+    - {click: "f", long_click: Page_Up, swipe_up: Page_Up, swipe_down: Up, hint: "↑"}
+    - {click: "g", long_click: Page_Down, swipe_up: Page_Down, swipe_down: Right, hint: "→"}
+    - {click: "h"}
+    - {click: "j"}
+    - {click: "k", long_click: ":", swipe_up: ":", swipe_down: ";", hint: ";"}
+    - {click: "l", long_click: "\"", swipe_up: "\"", swipe_down: "'", hint: "'"}
+    - {width: 5}
+    # 第四行
+    - {click: Shift_L, double_click: Shift_L3, composing: delimiter, width: 15}
+    - {click: "z", long_click: select_all, swipe_up: select_all, swipe_down: liquid_keyboard_switch, hint: "更多"}
+    - {click: "x", long_click: undo, swipe_up: undo, swipe_down: redo, hint: "↷"}
+    - {click: "c", long_click: cut, swipe_up: cut, swipe_down: liquid_keyboard_clipboard, hint: "剪贴"}
+    - {click: "v", long_click: copy, swipe_up: copy}
+    - {click: "b", long_click: paste_clip, swipe_up: paste_clip}
+    - {click: "n", long_click: Insert, swipe_up: Insert}
+    - {click: "m", long_click: Delete, swipe_up: Delete}
+    - {click: BackSpace, swipe_down: "{select_all}{BackSpace}", hint: "Clear", swipe_left: Escape, width: 15}
+    # 第五行
+    - {click: Keyboard_number, long_click: Menu, swipe_up: Menu, width: 12.5}
+    - {click: Keyboard_bqrw, long_click: Theme_settings, swipe_up: Theme_settings, swipe_down: Color_switch, hint: "颜色", width: 12.5}
+    - {click: ",", label: "，", long_click: "<", swipe_up: "<", swipe_left: "<>{Left}", swipe_right: "<>{Left}"}
+    - {click: space, long_click: Mode_switch, swipe_up: Mode_switch, swipe_left: Left, swipe_right: Right, width: 30}
+    - {click: ".", label: "。", long_click: ">", swipe_up: ">"}
+    - {click: "/", long_click: "?", swipe_up: "?"}
+    - {click: Return, composing: Return1, width: 15}
+
+  # 按键
+  # 功能按键
+  "preset_keys/Tab/label": "Tab"
+  "preset_keys/Shift_L/label": "⇪"
+  "preset_keys/Shift_L3/label": "⇪"
+  "preset_keys/Return/label": "Enter"
+  "preset_keys/Return1/label": "Enter"
+  "preset_keys/Return2/label": "Enter"
+  #"preset_keys/Return/label": "↩"
+  #"preset_keys/Return1/label": "↩"
+  #"preset_keys/Return2/label": "↩"
+  "preset_keys/BackSpace/label": "⇦"
+  "preset_keys/BackSpace2/label": "⇦"
+  "preset_keys/Clear/label": "Clear"
+  "preset_keys/Escape/label": "Esc"
+  "preset_keys/Home/label": "Home"
+  "preset_keys/Insert/label": "Insert"
+  "preset_keys/Delete/label": "Delete"
+  "preset_keys/End/label": "End"
+  "preset_keys/Page_Up/label": "PgUp"
+  "preset_keys/Page_Down/label": "PgDn"
+  "preset_keys/undo/label": "↶"
+  "preset_keys/redo/label": "↷"
+  # Trime 命令
+  "preset_keys/Date/option": "yyyy-MM-dd"
+  # 符号按键（替换开头字符）
+  "preset_keys/符号/text": "{Escape}Ffh"
+  "preset_keys/电脑/text": "{Escape}Fdn"
+  "preset_keys/象棋/text": "{Escape}Fxq"
+  "preset_keys/麻将/text": "{Escape}Fmj"
+  "preset_keys/骰子/text": "{Escape}Fsz"
+  "preset_keys/扑克/text": "{Escape}Fpk"
+  "preset_keys/天气/text": "{Escape}Ftq"
+  "preset_keys/音乐/text": "{Escape}Fyy"
+  "preset_keys/八卦/text": "{Escape}Fbg"
+  "preset_keys/易经/text": "{Escape}Flssg"
+  "preset_keys/天体/text": "{Escape}Ftt"
+  "preset_keys/星座/text": "{Escape}Fxz"
+  "preset_keys/星号/text": "{Escape}Fxh"
+  "preset_keys/方块/text": "{Escape}Ffk"
+  "preset_keys/几何/text": "{Escape}Fjh"
+  "preset_keys/箭头/text": "{Escape}Fjt"
+  "preset_keys/数学/text": "{Escape}Fsx"
+  "preset_keys/上标/text": "{Escape}Fsb"
+  "preset_keys/下标/text": "{Escape}Fxb"
+  "preset_keys/单位/text": "{Escape}Fdw"
+  "preset_keys/货币/text": "{Escape}Fhb"
+  "preset_keys/拼音/text": "{Escape}Fpy"
+  "preset_keys/注音/text": "{Escape}Fzy"
+  "preset_keys/假名/text": "{Escape}Fjm"
+  "preset_keys/片假名/text": "{Escape}Fpjm"
+  "preset_keys/韩文/text": "{Escape}Fhw"
+  "preset_keys/希腊/text": "{Escape}Fxl"
+  "preset_keys/希腊大写/text": "{Escape}Fxld"
+  "preset_keys/罗马/text": "{Escape}Flm"
+  "preset_keys/罗马大写/text": "{Escape}Flmd"
+  "preset_keys/俄语/text": "{Escape}Fey"
+  "preset_keys/俄语大写/text": "{Escape}Feyd"
+  "preset_keys/表情/text": "{Escape}Fbq"
+  "preset_keys/一/text": "{Escape}F1"
+  "preset_keys/二/text": "{Escape}F2"
+  "preset_keys/三/text": "{Escape}F3"
+  "preset_keys/四/text": "{Escape}F4"
+  "preset_keys/五/text": "{Escape}F5"
+  "preset_keys/六/text": "{Escape}F6"
+  "preset_keys/七/text": "{Escape}F7"
+  "preset_keys/八/text": "{Escape}F8"
+  "preset_keys/九/text": "{Escape}F9"
+  "preset_keys/零/text": "{Escape}F0"
+  "preset_keys/十/text": "{Escape}F10"
+  "preset_keys/分数/text": "{Escape}Ffs"
+  "preset_keys/标点/text": "{Escape}Fbd"
+  "preset_keys/偏旁/text": "{Escape}Fpp"
+  "preset_keys/竖标点/text": "{Escape}Fbdz"
+
+  # 样式
+  # 候选字号
+  "style/candidate_text_size": 20
+  # 编码提示布局位置：right / top / overlay
+  "style/comment_position": right
+  # 键盘高度：无功能行则 250，有功能行则 300
+  "style/keyboard_height": 250
+  # 横屏键盘高度：无功能行则 200，有功能行则 250
+  "style/keyboard_height_land": 200

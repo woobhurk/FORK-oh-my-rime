@@ -6,14 +6,14 @@ user.yaml
 installation.yaml
 
 # 部署生成的文件
-build
-*.userdb
+build/
+*.userdb/
 
 # 同步目录
 sync/
 
-# 自定义文件
-*.custom.yaml
+## 自定义文件
+#*.custom.yaml
 
 # VSCode 项目文件
 *.code-workspace

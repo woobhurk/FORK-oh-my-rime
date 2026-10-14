@@ -1,0 +1,7 @@
+# Rime schema
+# encoding: utf-8
+
+patch:
+  __include: "tyz-common-schema:/patch"
+  # 颜色方案
+  "style/color_scheme": "brisk"
