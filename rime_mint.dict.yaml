@@ -6,7 +6,6 @@ use_preset_vocabulary: false
 # 此处为 输入法所用到的词库，既补充拓展词库的地方
 # 万象拼音词库，由同步工具自动更新
 import_tables:
-  - dicts/zhwiki
   - dicts/custom_simple          # 自定义
   - dicts/rime_mint.chars        # 单字（万象拼音词库）
   - dicts/rime_mint.base         # 基础词（万象拼音词库）
@@ -19,4 +18,5 @@ import_tables:
   - dicts/rime_ice.others        # 雾凇拼音 others词库（用于自动纠错）
   # 20240608 Emoji完全交由OpenCC，不再使用字典作为补充
   # - dicts/other_emoji            # Emoji(仅仅作为补充，实际使用一般是OpenCC生效)
+  - dicts/zhwiki
 ...
