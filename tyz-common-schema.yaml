@@ -317,6 +317,10 @@ patch:
   "switches/@0/reset": 1
 
   # 翻译器
+  # 关闭部分场景的词典功能（不自动排序、置顶）
+  "translator/disable_user_dict_for_patterns":
+    - "^.{1}$" # 仅匹配单个字符（单字）
+    #- "^.{1,2}$" # 如果连双字也要排除，就用这条替换上面那条
   # 关闭自动补全：大于 4 音节的词条自动补全
   "translator/enable_word_completion": false
   # 显示原始编码
