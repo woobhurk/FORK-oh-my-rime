@@ -28,6 +28,16 @@ patch:
   "translator/contextual_suggestions": true
   "translator/max_homophones": 7
   "translator/max_homographs": 7
+  ## 来自万象的配置
+  #"grammar/language": wanxiang-lts-zh-hans
+  #"grammar/collocation_max_length": 6
+  #"grammar/collocation_min_length": 2
+  #"grammar/collocation_penalty": -14
+  #"grammar/non_collocation_penalty": -6
+  #"grammar/weak_collocation_penalty": -100
+  #"grammar/rear_penalty": -18
+  #"translator/contextual_suggestions": false
+  #"translator/max_homophones": 8
 
   # 候选词个数
   "menu/page_size": 9
@@ -317,10 +327,12 @@ patch:
   "switches/@0/reset": 1
 
   # 翻译器
-  # 关闭部分场景的词典功能（不自动排序、置顶）
+  # 这些编码不读取用户词库，因此不会被用户词调频、置顶。
+  # 匹配的是当前按键编码，不是汉字个数。小鹤双拼单字固定 2 码，双字 4 码。
+  # / 是辅码触发键。不加这段的话，一输入辅码，单字又会恢复调频。
+  # 全拼单字长度不固定，规则在 rime_mint.custom.yaml 里覆盖，不能和这里共用。
   "translator/disable_user_dict_for_patterns":
-    - "^.{1}$" # 仅匹配单个字符（单字）
-    #- "^.{1,2}$" # 如果连双字也要排除，就用这条替换上面那条
+    - "^[a-z]{2}(/[a-z]*)?$"
   # 关闭自动补全：大于 4 音节的词条自动补全
   "translator/enable_word_completion": false
   # 显示原始编码
