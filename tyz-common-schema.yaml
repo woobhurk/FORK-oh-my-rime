@@ -17,27 +17,28 @@ patch:
   "melt_eng/enable_completion": true
 
   # 语言模型
-  "grammar/language": wanxiang-lts-zh-hans
-  "grammar/collocation_max_length": 8 # 命中的最长词组
-  "grammar/collocation_min_length": 2 # 命中的最短词组，搭配词频健全的词库时候应当最小值设为3避开2字高频词
-  "grammar/collocation_penalty": -16 # 对常见搭配词组施加的惩罚值。较高的负值会降低这些搭配被选中的概率，防止过于频繁地出现某些固定搭配。
-  "grammar/non_collocation_penalty": -8 # 对非搭配词组施加的惩罚值。较高的负值会降低非搭配词组被选中的概率，避免不合逻辑或不常见的词组组合。
-  "grammar/weak_collocation_penalty": -100 # 对弱搭配词组施加的惩罚值。保持默认值通常是为了有效过滤掉不太常见但仍然合理的词组组合。
-  "grammar/rear_penalty": -20 # 对词组中后续词语的位置施加的惩罚值。较高的负值会降低某些词语在句子后部出现的概率，防止句子结构不自然。
-  # translator 内加载
-  "translator/contextual_suggestions": true
-  "translator/max_homophones": 7
-  "translator/max_homographs": 7
-  ## 来自万象的配置
+  ## 来自薄荷拼音的配置
   #"grammar/language": wanxiang-lts-zh-hans
-  #"grammar/collocation_max_length": 6
-  #"grammar/collocation_min_length": 2
-  #"grammar/collocation_penalty": -14
-  #"grammar/non_collocation_penalty": -6
-  #"grammar/weak_collocation_penalty": -100
-  #"grammar/rear_penalty": -18
-  #"translator/contextual_suggestions": false
-  #"translator/max_homophones": 8
+  #"grammar/collocation_max_length": 8 # 命中的最长词组
+  #"grammar/collocation_min_length": 2 # 命中的最短词组，搭配词频健全的词库时候应当最小值设为3避开2字高频词
+  #"grammar/collocation_penalty": -16 # 对常见搭配词组施加的惩罚值。较高的负值会降低这些搭配被选中的概率，防止过于频繁地出现某些固定搭配。
+  #"grammar/non_collocation_penalty": -8 # 对非搭配词组施加的惩罚值。较高的负值会降低非搭配词组被选中的概率，避免不合逻辑或不常见的词组组合。
+  #"grammar/weak_collocation_penalty": -100 # 对弱搭配词组施加的惩罚值。保持默认值通常是为了有效过滤掉不太常见但仍然合理的词组组合。
+  #"grammar/rear_penalty": -20 # 对词组中后续词语的位置施加的惩罚值。较高的负值会降低某些词语在句子后部出现的概率，防止句子结构不自然。
+  ## translator 内加载
+  #"translator/contextual_suggestions": true
+  #"translator/max_homophones": 7
+  #"translator/max_homographs": 7
+  # 来自万象的配置
+  "grammar/language": wanxiang-lts-zh-hans
+  "grammar/collocation_max_length": 6
+  "grammar/collocation_min_length": 2
+  "grammar/collocation_penalty": -14
+  "grammar/non_collocation_penalty": -6
+  "grammar/weak_collocation_penalty": -100
+  "grammar/rear_penalty": -18
+  "translator/contextual_suggestions": false
+  "translator/max_homophones": 8
 
   # 候选词个数
   "menu/page_size": 9
@@ -327,12 +328,12 @@ patch:
   "switches/@0/reset": 1
 
   # 翻译器
-  # 这些编码不读取用户词库，因此不会被用户词调频、置顶。
-  # 匹配的是当前按键编码，不是汉字个数。小鹤双拼单字固定 2 码，双字 4 码。
-  # / 是辅码触发键。不加这段的话，一输入辅码，单字又会恢复调频。
-  # 全拼单字长度不固定，规则在 rime_mint.custom.yaml 里覆盖，不能和这里共用。
-  "translator/disable_user_dict_for_patterns":
-    - "^[a-z]{2}(/[a-z]*)?$"
+  ## 这些编码不读取用户词库，因此不会被用户词调频、置顶。
+  ## 匹配的是当前按键编码，不是汉字个数。小鹤双拼单字固定 2 码，双字 4 码。
+  ## / 是辅码触发键。不加这段的话，一输入辅码，单字又会恢复调频。
+  ## 全拼单字长度不固定，规则在 rime_mint.custom.yaml 里覆盖，不能和这里共用。
+  #"translator/disable_user_dict_for_patterns":
+  #  - "^[a-z]{2}(/[a-z]*)?$"
   # 关闭自动补全：大于 4 音节的词条自动补全
   "translator/enable_word_completion": false
   # 显示原始编码
